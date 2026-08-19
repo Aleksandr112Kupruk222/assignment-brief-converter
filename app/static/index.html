@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment Brief Converter</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">Document migration tool</p><h1>Assignment Brief Converter</h1>
+      <p>Move assignment content into a newer Word template while keeping the new layout.</p></header>
+    <section class="card" id="upload-card">
+      <div class="step"><span>1</span><label>Upload old assignment brief<input id="old-file" type="file" accept=".docx"></label><small id="old-name">Word .docx, up to 20 MB</small></div>
+      <div class="step"><span>2</span><label>Upload an example using the new template<input id="new-file" type="file" accept=".docx"></label><small id="new-name">Use a completed example if available</small></div>
+      <button id="analyse">Analyse documents</button><p class="error" id="error" role="alert"></p>
+    </section>
+    <section id="review" hidden>
+      <div class="card"><p class="eyebrow">Analysis complete</p><h2>Detected content</h2><div id="detected" class="chips"></div></div>
+      <div class="card"><h2>Review mapping</h2><p>Choose which old-document content belongs in each new-template field. Original wording is copied unchanged.</p>
+        <div class="table-wrap"><table><thead><tr><th>New template section</th><th>Old assignment content</th><th>Preview / missing value</th></tr></thead><tbody id="mapping-body"></tbody></table></div>
+        <div class="notice"><strong>Teacher review required.</strong> Check dates, criteria, learning outcomes and all mappings before official use.</div>
+        <button id="generate">Generate new assignment brief</button><p class="error" id="generate-error" role="alert"></p>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
+
