@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv*/
+venv/
+.env
+uploads/
+generated/
+*.docx
+!tests/fixtures/.gitkeep
+work/
+outputs/
